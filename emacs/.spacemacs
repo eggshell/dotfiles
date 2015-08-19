@@ -21,7 +21,9 @@
      better-defaults
      emacs-lisp
      (git :variables
-          git-gutter-use-fringe t)
+          git-gutter-use-fringe t
+          git-magit-status-fullscreen t
+          git-use-magit-next t)
      markdown
      org
      shell :variables
