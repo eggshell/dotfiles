@@ -1,6 +1,3 @@
-alias emacs='Emacs'
-alias vim='Emacs'
-alias horn='afplay ~/Downloads/Triple\ Air\ Horn.mp3'
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
