@@ -98,3 +98,6 @@ if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
 else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
+
+#used for zsh syntax highlighting
+source ~/dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
