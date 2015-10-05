@@ -1,8 +1,27 @@
-" Colors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer: 
+"       Cullen Taylor
+"       https://github.com/CullenTaylor
+"
+" Sections:
+"    -> Colors
+"    -> Spaces and Tabs
+"    -> UI Config
+"    -> Searching
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme molokai
 syntax enable
 
-" Spaces and Tabs
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spaces and Tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tabstop=4
 set softtabstop=4
 set expandtab
@@ -10,6 +29,10 @@ set expandtab
 " refer to http://vim.wikia.com/wiki/Backspace_and_delete_problems
 set backspace=indent,eol,start
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => UI Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "UI Config
 set ruler
 set cursorline
@@ -20,7 +43,10 @@ set colorcolumn=80
 " filetype indent on
 " filetype plugin on
 
-" Searching
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Searching
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set incsearch
 set hlsearch
 set showmatch
