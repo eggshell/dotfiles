@@ -52,3 +52,12 @@ set hlsearch
 set showmatch
 " turns off search highlight with ,<space>
 nnoremap <leader><space> :nohlsearch<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Shortcuts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" sets fd combo to function like esc
+set timeout timeoutlen=1000 ttimeoutlen=100
+set <f13>=fd
+imap <F13> <esc>
