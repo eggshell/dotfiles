@@ -17,7 +17,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme molokai
 syntax enable
-
+set background=dark
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spaces and Tabs
