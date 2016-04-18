@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/mctaylor/dev/mctaylor/ursula_env/hosting_envs/softlayer/templates/2.0.x'
-let g:netrw_dirhist_2='/Users/mctaylor/dev/ursula/roles/neutron-control'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/mctaylor/development/go2/src/ursula_env/prius'
+let g:netrw_dirhist_2='/Users/mctaylor/dev/mctaylor/wombat/openstack-ansible-undercloud/inventories'
+let g:netrw_dirhist_3='/Users/mctaylor/dev/mctaylor/wombat/openstack-ansible-undercloud/playbook/roles/sshd/templates'
+let g:netrw_dirhist_4='/Users/mctaylor/dev/mctaylor/sl-tools/depl/pre'
+let g:netrw_dirhist_5='/Users/mctaylor/dev/mctaylor/wombat/openstack-ansible/playbook/roles/ovn-controller/defaults'
