@@ -1,27 +1,3 @@
-#custom aliases
-alias deac="deactivate"
-alias rf="rm -rf"
-alias gc="git commit"
-alias gs="git status"
-alias gr="git rebase"
-alias gp="git push"
-alias ..="cd .."
-alias c="clear"
-alias ll="ls -al"
-alias grep="grep --color=auto"
-# Stop after sending count ECHO_REQUEST packets #
-alias ping='ping -c 5'
-# Do not wait interval 1 second, go fast #
-alias fastping='ping -c 100 -s.2'
-
-# use correct sound player based on OS
-if [[ "$(uname)" = "Darwin" ]]; then
-    alias play="afplay"
-else
-    alias play="mpg123 -q"
-fi
-
-alias whomp="play ~/sounds/price_horn.mp3 &"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -123,10 +99,35 @@ export PIP_RESPECT_VIRTUALENV=true
 #fi
 
 #used for zsh syntax highlighting
-source ~/dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dev/utils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #automatically cd into directory after creating
 function mkdir
 {
   command mkdir $1 && cd $1
 }
+
+#custom aliases
+alias deac="deactivate"
+alias rf="rm -rf"
+alias gc="git commit"
+alias gs="git status"
+alias gr="git rebase"
+alias gp="git push"
+alias ..="cd .."
+alias c="clear"
+alias ll="ls -al"
+alias grep="grep --color=auto"
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
+# Do not wait interval 1 second, go fast #
+alias fastping='ping -c 100 -s.2'
+
+# use correct sound player based on OS
+if [[ "$(uname)" = "Darwin" ]]; then
+    alias play="afplay"
+else
+    alias play="mpg123 -q"
+fi
+
+alias whomp="play ~/sounds/price_horn.mp3 &"
