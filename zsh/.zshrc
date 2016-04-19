@@ -1,6 +1,5 @@
 #custom aliases
 alias deac="deactivate"
-alias whomp="afplay ~/sounds/price_horn.mp3"
 alias rf="rm -rf"
 alias gc="git commit"
 alias gs="git status"
@@ -15,6 +14,14 @@ alias ping='ping -c 5'
 # Do not wait interval 1 second, go fast #
 alias fastping='ping -c 100 -s.2'
 
+# use correct sound player based on OS
+if [[ "$(uname)" = "Darwin" ]]; then
+    alias play="afplay"
+else
+    alias play="mpg123 -q"
+fi
+
+alias whomp="play ~/sounds/price_horn.mp3 &"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
