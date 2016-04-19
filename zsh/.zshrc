@@ -100,8 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# lines to enable virtualenv commands on mac
-
 # set where virutal environments will live
 export WORKON_HOME=$HOME/.virtualenvs
 # ensure all new environments are isolated from the site-packages directory
@@ -110,11 +108,12 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 # makes pip detect an active virtualenv and install to it
 export PIP_RESPECT_VIRTUALENV=true
-if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-else
-    echo "WARNING: Can't find virtualenvwrapper.sh"
-fi
+# lines to enable virtualenv commands on mac
+#if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
+#    source /usr/local/bin/virtualenvwrapper.sh
+#else
+#    echo "WARNING: Can't find virtualenvwrapper.sh"
+#fi
 
 #used for zsh syntax highlighting
 source ~/dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
