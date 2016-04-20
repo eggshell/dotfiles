@@ -19,7 +19,7 @@ endif
 " => Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme molokai
-"syntax enable
+syntax enable
 set background=dark
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
