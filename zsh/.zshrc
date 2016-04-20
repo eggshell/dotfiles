@@ -92,11 +92,13 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 # makes pip detect an active virtualenv and install to it
 export PIP_RESPECT_VIRTUALENV=true
 # lines to enable virtualenv commands on mac
-#if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
-#    source /usr/local/bin/virtualenvwrapper.sh
-#else
-#    echo "WARNING: Can't find virtualenvwrapper.sh"
-#fi
+if [[ "$(uname)" = "Darwin" ]]; then
+    if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
+        source /usr/local/bin/virtualenvwrapper.sh
+    else
+        echo "WARNING: Can't find virtualenvwrapper.sh"
+    fi
+fi
 
 #used for zsh syntax highlighting
 source ~/dev/utils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
