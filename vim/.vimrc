@@ -33,7 +33,8 @@ set expandtab
 " Fixes backspace problems
 " refer to http://vim.wikia.com/wiki/Backspace_and_delete_problems
 set backspace=indent,eol,start
-
+" fixes tabbing for bash scripts
+autocmd Filetype sh setlocal ts=4 sw=4 expandtab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI Config
