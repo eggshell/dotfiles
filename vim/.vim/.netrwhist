@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/mctaylor/development/go2/src/ursula_env/prius'
 let g:netrw_dirhist_2='/Users/mctaylor/dev/mctaylor/wombat/openstack-ansible-undercloud/inventories'
 let g:netrw_dirhist_3='/Users/mctaylor/dev/mctaylor/wombat/openstack-ansible-undercloud/playbook/roles/sshd/templates'
 let g:netrw_dirhist_4='/Users/mctaylor/dev/mctaylor/sl-tools/depl/pre'
 let g:netrw_dirhist_5='/Users/mctaylor/dev/mctaylor/wombat/openstack-ansible/playbook/roles/ovn-controller/defaults'
+let g:netrw_dirhist_6='/home/eggshell/ubuntu-post-install'
