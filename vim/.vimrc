@@ -35,6 +35,11 @@ set expandtab
 set backspace=indent,eol,start
 " fixes tabbing for bash scripts
 autocmd Filetype sh setlocal ts=4 sw=4 expandtab
+" highlights 80+ char lines and trailing whitespace in red
+highlight ExtraWhitespace ctermbg=red guibg=red
+highlight LongLine ctermbg=lightred guibg=lightred
+call matchadd('LongLine', '\%>80v.\+')
+call matchadd('ExtraWhitespace', '\s\+$')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI Config
