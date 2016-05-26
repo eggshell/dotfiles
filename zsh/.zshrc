@@ -110,6 +110,7 @@ function mkdir
 }
 
 #custom aliases
+alias svim="sudo vim"
 alias deac="deactivate"
 alias rf="rm -rf"
 alias gcb="git checkout -b"
