@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/mctaylor/dev/piratecloud/pyrrrat-ci/envs/prod-dal09-psr-lbr'
 let g:netrw_dirhist_2='/Users/mctaylor/dev/piratecloud/pyrrrat-ci/envs/prod-dal09-psr-lbr/group_vars'
+let g:netrw_dirhist_3='/home/eggshell/dev/egg-shell.github.io/.git'
+let g:netrw_dirhist_4='/home/eggshell/dev/egg-shell.github.io/_site'
+let g:netrw_dirhist_5='/home/eggshell/dev/instigitr'
+let g:netrw_dirhist_6='/home/eggshell/dev/ubuntu-post-install/data'
+let g:netrw_dirhist_7='/home/eggshell/dev/instigitr/instigitr'
+let g:netrw_dirhist_8='/home/eggshell/dev/instigitr/instigitr/templates'
+let g:netrw_dirhist_9='/home/eggshell/dev/instigitr/instigitr'
