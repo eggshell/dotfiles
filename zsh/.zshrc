@@ -131,7 +131,7 @@ alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
 
 # use correct sound player based on OS
-if [[ "$(uname)" = "Darwin" ]]; then
+if [[ "$(uname)"="Darwin" ]]; then
     alias play="afplay"
 else
     alias play="mpg123 -q"
@@ -140,3 +140,5 @@ fi
 alias whomp="play ~/sounds/price_horn.mp3 &"
 
 alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
+
+alias pbcopy="xclip -sel clip"
