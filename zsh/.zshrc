@@ -103,12 +103,6 @@ fi
 #used for zsh syntax highlighting
 source ~/dev/utils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#automatically cd into directory after creating
-function mkdir
-{
-  command mkdir $1 && cd $1
-}
-
 #custom aliases
 alias svim="sudo vim"
 alias deac="deactivate"
@@ -125,10 +119,6 @@ alias ..="cd .."
 alias c="clear"
 alias ll="ls -al"
 alias grep="grep --color=auto"
-# Stop after sending count ECHO_REQUEST packets #
-alias ping='ping -c 5'
-# Do not wait interval 1 second, go fast #
-alias fastping='ping -c 100 -s.2'
 
 # use correct sound player based on OS
 if [[ "$(uname)"="Darwin" ]]; then
