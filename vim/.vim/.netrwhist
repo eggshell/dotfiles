@@ -1,29 +1,7 @@
 let g:netrw_dirhistmax  =10
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/mctaylor/dev/piratecloud/pyrrrat-ci/envs/prod-dal09-psr-lbr'
-let g:netrw_dirhist_2='/Users/mctaylor/dev/piratecloud/pyrrrat-ci/envs/prod-dal09-psr-lbr/group_vars'
-let g:netrw_dirhist_3='/home/eggshell/dev/egg-shell.github.io/.git'
-let g:netrw_dirhist_4='/home/eggshell/dev/egg-shell.github.io/_site'
-let g:netrw_dirhist_5='/home/eggshell/dev/instigitr'
-let g:netrw_dirhist_6='/home/eggshell/dev/ubuntu-post-install/data'
-let g:netrw_dirhist_7='/home/eggshell/dev/instigitr/instigitr'
-let g:netrw_dirhist_8='/home/eggshell/dev/instigitr/instigitr/templates'
-let g:netrw_dirhist_9='/home/eggshell/dev/instigitr/instigitr'
-=======
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/mctaylor/dev/FrontDoor/misc/travis'
-let g:netrw_dirhist_2='/Users/mctaylor/dev/FrontDoor/infra/roles/gpg'
-let g:netrw_dirhist_3='/Users/mctaylor/dev/FrontDoor/infra/roles/gpg/tasks'
-let g:netrw_dirhist_4='/Users/mctaylor/FrontDoor/deployment/roles/common/templates'
-let g:netrw_dirhist_5='/Users/mctaylor/dev/FrontDoor/infra/envs'
-let g:netrw_dirhist_6='/Users/mctaylor/dev/FrontDoor/misc'
-let g:netrw_dirhist_7='/Users/mctaylor/dev/FrontDoor'
->>>>>>> Stashed changes
-=======
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/eggshell/test/.git'
 let g:netrw_dirhist_2='/home/eggshell/dev/drippi/.git'
 let g:netrw_dirhist_3='/home/eggshell/dev/poop/.git'
->>>>>>> Stashed changes
+let g:netrw_dirhist_4='/home/eggshell/Downloads/ubuntu-post-install-0.1'
+let g:netrw_dirhist_5='/home/eggshell/dev/embryo/ubuntu'
