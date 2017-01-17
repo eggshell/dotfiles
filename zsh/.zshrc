@@ -122,6 +122,7 @@ alias ll="ls -al"
 alias grep="grep --color=auto"
 alias headphones="pacmd set-default-sink alsa_output.usb-Schiit_Audio_USB_Modi_Device-00.iec958-stereo"
 alias speakers="pacmd set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo"
+alias lorelint="find . -name '*.md' -print | xargs -n1 textlint -c .textlintrc.js -f pretty-error"
 
 # use correct sound player based on OS
 if [[ "$(uname)"="Darwin" ]]; then
