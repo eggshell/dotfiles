@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/eggshell/test/.git'
-let g:netrw_dirhist_2='/home/eggshell/dev/drippi/.git'
-let g:netrw_dirhist_3='/home/eggshell/dev/poop/.git'
-let g:netrw_dirhist_4='/home/eggshell/Downloads/ubuntu-post-install-0.1'
-let g:netrw_dirhist_5='/home/eggshell/dev/embryo/ubuntu'
