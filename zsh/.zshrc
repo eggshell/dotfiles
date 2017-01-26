@@ -69,4 +69,4 @@ fi
 alias whomp="play ~/sounds/price_horn.mp3 &"
 alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
 alias pbcopy="xclip -sel clip"
-
+alias lock="xscreensaver-command --lock"
