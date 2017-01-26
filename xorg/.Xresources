@@ -7,22 +7,32 @@ xterm*SaveLines: 5000
 
 ! normal copy+paste
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.iso14755: 	      False
+URxvt.iso14755: 	          False
 URxvt.perl-ext-common: 	      default,clipboard
+
+! make fonts look decent
+Xft.lcdfilter: lcddefault
+Xft.antialias: true
+Xft.autohint: 0
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.dpi: 96
 
 ! urxvt config
 URxvt*background:         Black
 URxvt*foreground:         White
-URxvt.font:               xft:bitstream vera sans mono:size=8:antialias=true
-URxvt.boldFont:           xft:bitstream vera sana mono:bold:size=8:antialias=true
-URxvt*scrollColor: 	  #777777
-URxvt*scrollstyle: 	  plain
+URxvt.font:               xft:bitstream vera sans mono:size=10:antialias=true
+!uncommented to make certain bold letters not look weird
+!URxvt.boldFont:           xft:bitstream vera sana mono:bold:size=10:antialias=true
+URxvt*scrollColor: 	      #777777
+URxvt*scrollstyle: 	      plain
 URxvt*scrollTtyKeypress:  true
 URxvt*scrollTtyOutput: 	  false
 URxvt*scrollWithBuffer:   false
 URxvt*secondaryScroll: 	  true
-URxvt*skipScroll: 	  true
-URxvt*scrollBar: 	  false
+URxvt*skipScroll: 	      true
+URxvt*scrollBar: 	      false
 URxvt*scrollBar_right: 	  false
 URxvt*scrollBar_floating: false
 
