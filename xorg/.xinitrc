@@ -8,6 +8,7 @@ xrdb -merge ~/.Xresources
 feh --bg-scale /home/eggshell/dotfiles/wallpaper/seattle.jpg
 
 xscreensaver &
+redshift-gtk &
 
 # starts i3wm
 exec i3
