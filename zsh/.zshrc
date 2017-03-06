@@ -39,7 +39,6 @@ fi
 #used for zsh syntax highlighting
 source ~/utils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#custom aliases
 alias svim="sudo vim"
 alias deac="deactivate"
 alias rf="rm -rf"
@@ -71,3 +70,9 @@ alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1])
 alias pbcopy="xclip -sel clip"
 alias lock="xscreensaver-command --lock"
 alias marchey="archey -c"
+
+# dns cache flusher for macOS
+alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
+
+### Added by the Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
