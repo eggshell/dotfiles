@@ -33,11 +33,11 @@ if [[ $(uname -r) == *"ARCH"* ]]; then
     exec startx
   fi
 else
-  source /usr/local/bin/virtualenvwrapper.sh
+  source /home/eggshell/.local/bin/virtualenvwrapper.sh
 fi
 
 #used for zsh syntax highlighting
-source ~/utils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias svim="sudo vim"
 alias deac="deactivate"
@@ -58,21 +58,9 @@ alias headphones="pacmd set-default-sink alsa_output.usb-Schiit_Audio_USB_Modi_D
 alias speakers="pacmd set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo"
 alias lorelint="find . -name '*.md' -print | xargs -n1 textlint -c .textlintrc.js -f pretty-error"
 
-# use correct sound player based on OS
-if [[ "$(uname)"="Darwin" ]]; then
-    alias play="afplay"
-else
-    alias play="mpg123 -q"
-fi
-
+alias play="mpg123 -q"
 alias whomp="play ~/sounds/price_horn.mp3 &"
 alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
 alias pbcopy="xclip -sel clip"
 alias lock="xscreensaver-command --lock"
 alias marchey="archey -c"
-
-# dns cache flusher for macOS
-alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
-
-### Added by the Bluemix CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete
