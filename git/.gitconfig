@@ -3,3 +3,5 @@
 	email = cullentaylor@outlook.com
 [core]
 	editor = vim
+[gitreview]
+	username = mctaylor
