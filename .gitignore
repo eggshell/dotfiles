@@ -7,3 +7,14 @@ Session.vim
 .netrwhist
 *~
 tags
+
+# ignore hexchat configs
+servlist.conf
+sound.conf
+notify.conf
+ignore.conf
+hexchat.conf
+chanopt.conf
+addon_sysinfo.conf
+addon_checksum.conf
+scrollback
