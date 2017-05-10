@@ -32,6 +32,8 @@ if [[ $(uname -r) == *"ARCH"* ]]; then
   if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec startx
   fi
+elif [[ $(uname) == *"Darwin"* ]]; then
+  source /usr/local/bin/virtualenvwrapper.sh
 else
   source /home/eggshell/.local/bin/virtualenvwrapper.sh
 fi
