@@ -38,6 +38,9 @@ else
   source /home/eggshell/.local/bin/virtualenvwrapper.sh
 fi
 
+# path for global npm package installations
+export NODE_PATH=/usr/local/lib/node_modules
+
 #used for zsh syntax highlighting
 source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
