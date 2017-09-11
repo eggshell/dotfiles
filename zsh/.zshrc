@@ -13,7 +13,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 export VISUAL="vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 
