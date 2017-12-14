@@ -16,6 +16,12 @@ source $ZSH/oh-my-zsh.sh
 # path for global npm package installations
 export NODE_PATH=/usr/local/lib/node_modules
 
+# mac-specific
+if [ -f /usr/local/bin/brew ]; then
+    # Added by the Bluemix CLI
+    source /usr/local/Bluemix/bx/zsh_autocomplete
+fi
+
 
 ################################################################################
 #                                                                              #
