@@ -52,6 +52,11 @@ if [ -f /usr/local/bin/brew ]; then
     alias marchey="archey -c"
 fi
 
+# arch-specific
+if [ -f /usr/bin/pacman ]; then
+    alias archey="archey3"
+fi
+
 
 ################################################################################
 #                                                                              #
@@ -96,10 +101,10 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 
 # source the correct location for virtualenvwrapper based on os
-if [[ $(uname -r) == *"ARCH"* ]]; then
-  source /usr/bin/virtualenvwrapper.sh
-elif [[ $(uname) == *"Darwin"* || $(uname) == "Linux" ]]; then
-  source /usr/local/bin/virtualenvwrapper.sh
+if [ -f /usr/bin/pacman ]; then
+    source /usr/bin/virtualenvwrapper.sh
+else
+    source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 
@@ -110,8 +115,8 @@ fi
 ################################################################################
 
 # start x on arch and ubuntu
-if [[ $(uname -r) == *"ARCH"* || $(uname) == "Linux" ]]; then
-  if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-    exec startx
-  fi
+if [[ -f /usr/local/bin/brew || -f /usr/bin/pacman ]]; then
+    if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+        exec startx
+    fi
 fi
