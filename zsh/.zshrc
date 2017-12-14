@@ -120,7 +120,7 @@ fi
 #                                                                              #
 ################################################################################
 
-# start x on arch and ubuntu
+# start x (tty1) on arch and ubuntu
 if [[ -f /usr/local/bin/brew || -f /usr/bin/pacman ]]; then
     if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
         exec startx
