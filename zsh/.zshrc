@@ -1,5 +1,63 @@
+################################################################################
+#                                                                              #
+#                          Environment Variables                               #
+#                                                                              #
+################################################################################
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+
+# User configuration
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export VISUAL="vim"
+# export MANPATH="/usr/local/man:$MANPATH"
+source $ZSH/oh-my-zsh.sh
+
+# path for global npm package installations
+export NODE_PATH=/usr/local/lib/node_modules
+
+
+################################################################################
+#                                                                              #
+#                                 Aliases                                      #
+#                                                                              #
+################################################################################
+
+# system
+alias c="clear"
+alias grep="grep --color=auto"
+alias ll="ls -al"
+alias lock="xscreensaver-command --lock"
+alias pbcopy="xclip -sel clip"
+alias rf="rm -rf"
+alias svim="sudo vim"
+alias ..="cd .."
+
+# git-related
+alias gcb="git checkout -b"
+alias gbd="git branch -D"
+alias gc="git commit -s"
+alias gs="git status"
+alias gr="git rebase"
+alias gra="git remote add"
+alias gp="git push"
+alias gpor="git push origin master"
+
+# python-related
+alias deac="deactivate"
+alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
+
+# mac-specific
+if [ -f /usr/local/bin/brew ]; then
+    alias marchey="archey -c"
+fi
+
+
+################################################################################
+#                                                                              #
+#                                  Prompt                                      #
+#                                                                              #
+################################################################################
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -11,61 +69,49 @@ ZSH_THEME="sunrise"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# User configuration
+#used for zsh syntax highlighting
+source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 export VISUAL="vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+
+################################################################################
+#                                                                              #
+#                                 Python                                       #
+#                                                                              #
+################################################################################
 
 # set where virutal environments will live
 export WORKON_HOME=$HOME/.virtualenvs
+
 # ensure all new environments are isolated from the site-packages directory
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+
 # use the same directory for virtualenvs as virtualenvwrapper
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
+
 # makes pip detect an active virtualenv and install to it
 export PIP_RESPECT_VIRTUALENV=true
+
+# source the correct location for virtualenvwrapper based on os
 if [[ $(uname -r) == *"ARCH"* ]]; then
   source /usr/bin/virtualenvwrapper.sh
+elif [[ $(uname) == *"Darwin"* || $(uname) == "Linux" ]]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+
+################################################################################
+#                                                                              #
+#                                 System                                       #
+#                                                                              #
+################################################################################
+
+# start x on arch and ubuntu
+if [[ $(uname -r) == *"ARCH"* || $(uname) == "Linux" ]]; then
   if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec startx
   fi
-elif [[ $(uname) == *"Darwin"* ]]; then
-  source /usr/local/bin/virtualenvwrapper.sh
-else
-  source /home/eggshell/.local/bin/virtualenvwrapper.sh
 fi
-
-# path for global npm package installations
-export NODE_PATH=/usr/local/lib/node_modules
-
-#used for zsh syntax highlighting
-source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-alias svim="sudo vim"
-alias deac="deactivate"
-alias rf="rm -rf"
-alias gcb="git checkout -b"
-alias gbd="git branch -D"
-alias gc="git commit -s"
-alias gs="git status"
-alias gr="git rebase"
-alias gra="git remote add"
-alias gp="git push"
-alias gpor="git push origin master"
-alias ..="cd .."
-alias c="clear"
-alias ll="ls -al"
-alias grep="grep --color=auto"
-alias headphones="pacmd set-default-sink alsa_output.usb-Schiit_Audio_USB_Modi_Device-00.iec958-stereo"
-alias speakers="pacmd set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo"
-alias lorelint="find . -name '*.md' -print | xargs -n1 textlint -c .textlintrc.js -f pretty-error"
-
-alias play="mpg123 -q"
-alias whomp="play ~/sounds/price_horn.mp3 &"
-alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
-alias pbcopy="xclip -sel clip"
-alias lock="xscreensaver-command --lock"
-alias marchey="archey -c"
