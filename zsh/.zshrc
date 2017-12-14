@@ -27,7 +27,6 @@ export NODE_PATH=/usr/local/lib/node_modules
 alias c="clear"
 alias grep="grep --color=auto"
 alias ll="ls -al"
-alias lock="xscreensaver-command --lock"
 alias pbcopy="xclip -sel clip"
 alias rf="rm -rf"
 alias svim="sudo vim"
@@ -55,6 +54,7 @@ fi
 # arch-specific
 if [ -f /usr/bin/pacman ]; then
     alias archey="archey3"
+    alias lock="xscreensaver-command --lock"
 fi
 
 
