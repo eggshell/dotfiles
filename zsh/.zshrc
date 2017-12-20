@@ -1,5 +1,29 @@
 ################################################################################
 #                                                                              #
+#                                  Prompt                                      #
+#                                                                              #
+################################################################################
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+ZSH_THEME="sunrise"
+
+#used for zsh syntax highlighting
+source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export VISUAL="vim"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+
+################################################################################
+#                                                                              #
 #                          Environment Variables                               #
 #                                                                              #
 ################################################################################
@@ -15,6 +39,7 @@ source $ZSH/oh-my-zsh.sh
 
 # path for global npm package installations
 export NODE_PATH=/usr/local/lib/node_modules
+
 
 # mac-specific
 if [ -f /usr/local/bin/brew ]; then
@@ -62,30 +87,6 @@ if [ -f /usr/bin/pacman ]; then
     alias archey="archey3"
     alias lock="xscreensaver-command --lock"
 fi
-
-
-################################################################################
-#                                                                              #
-#                                  Prompt                                      #
-#                                                                              #
-################################################################################
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="sunrise"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-#used for zsh syntax highlighting
-source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
-export VISUAL="vim"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 
 ################################################################################
