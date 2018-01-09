@@ -56,6 +56,7 @@ fi
 
 # system
 alias c="clear"
+alias caff="kill -9 $(ps aux | grep xscreensaver | grep -v color | head -n1 | cut -d' ' -f2)"
 alias grep="grep --color=auto"
 alias ll="ls -al"
 alias pbcopy="xclip -sel clip"
