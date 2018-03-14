@@ -41,13 +41,6 @@ source $ZSH/oh-my-zsh.sh
 export NODE_PATH=/usr/local/lib/node_modules
 
 
-# mac-specific
-if [ -f /usr/local/bin/brew ]; then
-    # Added by the Bluemix CLI
-    source /usr/local/Bluemix/bx/zsh_autocomplete
-fi
-
-
 ################################################################################
 #                                                                              #
 #                                 Aliases                                      #
@@ -78,13 +71,8 @@ alias gpor="git push origin master"
 alias deac="deactivate"
 alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
 
-# mac-specific
-if [ -f /usr/local/bin/brew ]; then
-    alias marchey="archey -c"
-fi
-
 # arch-specific
-if [ -f /usr/bin/pacman ]; then
+if [[ -f /usr/bin/apt || -f /usr/bin/pacman ]]; then
     alias archey="archey3"
     alias lock="xscreensaver-command --lock"
 fi
