@@ -102,17 +102,3 @@ if [ -f /usr/bin/pacman ]; then
 else
     source /usr/local/bin/virtualenvwrapper.sh
 fi
-
-
-################################################################################
-#                                                                              #
-#                                 System                                       #
-#                                                                              #
-################################################################################
-
-# start x (tty1) on arch and ubuntu
-if [[ -f /usr/bin/apt || -f /usr/bin/pacman ]]; then
-    if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-        exec startx
-    fi
-fi
