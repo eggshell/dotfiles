@@ -56,6 +56,9 @@ alias pbcopy="xclip -sel clip"
 alias rf="rm -rf"
 alias svim="sudo vim"
 alias ..="cd .."
+alias cpucheck="ps aux | sort -rk 3,3 | head -n 5"
+alias hdmi="xrandr --output HDMI1 --auto"
+alias notes="vim ~/dev/notes/notes.txt"
 
 # git-related
 alias gcb="git checkout -b"
@@ -75,6 +78,7 @@ alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1])
 if [[ -f /usr/bin/apt || -f /usr/bin/pacman ]]; then
     alias archey="archey3"
     alias lock="xscreensaver-command --lock"
+    alias glock="gnome-screensaver-command -l"
 fi
 
 
@@ -99,6 +103,6 @@ export PIP_RESPECT_VIRTUALENV=true
 # source the correct location for virtualenvwrapper based on os
 if [ -f /usr/bin/pacman ]; then
     source /usr/bin/virtualenvwrapper.sh
-else
-    source /usr/local/bin/virtualenvwrapper.sh
+elif [ -f /usr/bin/apt ]; then
+    source ~/.local/bin/virtualenvwrapper.sh
 fi
