@@ -4,11 +4,13 @@ xset r rate 200 60
 # make sure ~/.Xresources is loaded
 xrdb -merge ~/.Xresources
 
-# sets wallpaper
-feh --bg-scale /home/eggshell/dotfiles/wallpaper/seattle.jpg
+# turn off Thinkpad touchpad
+synclient TouchpadOff=1
 
+# startup applications
 xscreensaver &
 redshift-gtk &
+nm-applet &
 
 # starts i3wm
 exec i3
