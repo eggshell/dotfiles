@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CSD_WRAPPER="/usr/share/ibm-config-NetworkManager-openconnect/ohsd.py"
+CERT_PATH="/usr/share/ibm-config-NetworkManager-openconnect/cert.pem"
+KEY_PATH="/usr/share/ibm-config-NetworkManager-openconnect/key.pem"
+
+sudo openconnect -c $CERT_PATH              \
+                 -k $KEY_PATH               \
+                 --csd-user=nm-openconnect  \
+                 --csd-wrapper=$CSD_WRAPPER \
+                 --no-xmlpost -v sasvpn.pok.ibm.com
