@@ -40,6 +40,8 @@ source $ZSH/oh-my-zsh.sh
 # path for global npm package installations
 export NODE_PATH=/usr/local/lib/node_modules
 
+# path for global golang installation
+export PATH=$PATH:/usr/local/go/bin
 
 ################################################################################
 #                                                                              #
@@ -49,7 +51,7 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 # system
 alias c="clear"
-alias caff="kill -9 $(ps aux | grep xscreensaver | grep -v color | head -n1 | cut -d' ' -f2)"
+alias caff="kill -9 $(ps aux | awk '/xscreensaver/ && !/color/' | cut -d' ' -f3)"
 alias grep="grep --color=auto"
 alias ll="ls -al"
 alias pbcopy="xclip -sel clip"
@@ -59,6 +61,7 @@ alias ..="cd .."
 alias cpucheck="ps aux | sort -rk 3,3 | head -n 5"
 alias hdmi="xrandr --output HDMI1 --auto"
 alias notes="vim ~/dev/notes/notes.txt"
+alias dev="cd ~/dev"
 
 # git-related
 alias gcb="git checkout -b"
