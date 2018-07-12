@@ -43,6 +43,9 @@ export NODE_PATH=/usr/local/lib/node_modules
 # path for global golang installation
 export PATH=$PATH:/usr/local/go/bin
 
+# path for golang bins
+export PATH=$PATH:/home/eggshell/go/bin
+
 ################################################################################
 #                                                                              #
 #                                 Aliases                                      #
