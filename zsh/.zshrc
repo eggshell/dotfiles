@@ -54,7 +54,7 @@ export PATH=$PATH:/home/eggshell/go/bin
 
 # system
 alias c="clear"
-alias caff="kill -9 $(ps aux | awk '/xscreensaver/ && !/color/' | cut -d' ' -f2)"
+alias caff="xscreensaver-command -exit"
 alias decaff="xscreensaver &"
 alias grep="grep --color=auto"
 alias ll="ls -al"
