@@ -88,6 +88,9 @@ if [[ -f /usr/bin/apt || -f /usr/bin/pacman ]]; then
     alias glock="gnome-screensaver-command -l"
 fi
 
+# kubernetes
+alias k="kubectl"
+
 
 ################################################################################
 #                                                                              #
