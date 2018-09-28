@@ -64,6 +64,7 @@ alias svim="sudo vim"
 alias ..="cd .."
 alias cpucheck="ps aux | sort -rk 3,3 | head -n 5"
 alias hdmi="xrandr --output HDMI1 --auto"
+alias office="xrandr --output DP3-1 --mode 2560x1440 --scale 1x1 --fb 4480x3640 --right-of eDP1 --dpi 108"
 alias notes="vim ~/dev/notes/notes.txt"
 alias dev="cd ~/dev"
 
