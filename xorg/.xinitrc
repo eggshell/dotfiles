@@ -11,6 +11,7 @@ synclient TouchpadOff=1
 xscreensaver &
 redshift-gtk &
 nm-applet &
+dockd --daemon &
 
 # starts i3wm
 exec i3
