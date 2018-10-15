@@ -6,6 +6,7 @@ xrdb -merge ~/.Xresources
 
 # turn off Thinkpad touchpad
 synclient TouchpadOff=1
+synclient PalmDetect=1
 
 # startup applications
 xscreensaver &
