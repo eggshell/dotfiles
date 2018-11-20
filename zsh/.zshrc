@@ -58,6 +58,7 @@ alias caff="xscreensaver-command -exit"
 alias decaff="xscreensaver &"
 alias grep="grep --color=auto"
 alias ll="ls -al"
+alias lock="xscreensaver-command --lock"
 alias pbcopy="xclip -sel clip"
 alias rf="rm -rf"
 alias svim="sudo vim"
@@ -82,13 +83,6 @@ alias gpor="git push origin master"
 alias deac="deactivate"
 alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
 
-# arch-specific
-if [[ -f /usr/bin/apt || -f /usr/bin/pacman ]]; then
-    alias archey="archey3"
-    alias lock="xscreensaver-command --lock"
-    alias glock="gnome-screensaver-command -l"
-fi
-
 # kubernetes
 alias k="kubectl"
 
@@ -112,8 +106,6 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 
 # source the correct location for virtualenvwrapper based on os
-if [ -f /usr/bin/pacman ]; then
-    source /usr/bin/virtualenvwrapper.sh
-elif [ -f /usr/bin/apt ]; then
-    source ~/.local/bin/virtualenvwrapper.sh
+if [ -f /usr/bin/apt ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
 fi
