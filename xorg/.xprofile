@@ -5,14 +5,14 @@ xset r rate 200 60
 xrdb -merge ~/.Xresources
 
 # turn off Thinkpad touchpad
-synclient TouchpadOff=1
-synclient PalmDetect=1
+# synclient TouchpadOff=1
+# synclient PalmDetect=1
 
 # startup applications
 xscreensaver &
 redshift-gtk &
 nm-applet &
-dockd --daemon &
+#dockd --daemon &
 
 # starts i3wm
-exec i3
+#exec i3
