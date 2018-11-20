@@ -9,10 +9,8 @@ xrdb -merge ~/.Xresources
 # synclient PalmDetect=1
 
 # startup applications
-xscreensaver &
-redshift-gtk &
-nm-applet &
+compton --refresh-rate 60 &
 #dockd --daemon &
-
-# starts i3wm
-#exec i3
+nm-applet &
+redshift-gtk &
+xscreensaver &
