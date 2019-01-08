@@ -85,6 +85,7 @@ alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1])
 
 # kubernetes
 alias k="kubectl"
+alias ic="ibmcloud"
 
 
 ################################################################################
@@ -105,7 +106,5 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 # makes pip detect an active virtualenv and install to it
 export PIP_RESPECT_VIRTUALENV=true
 
-# source the correct location for virtualenvwrapper based on os
-if [ -f /usr/bin/apt ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-fi
+# source virtualenvwrapper.sh
+source /home/eggshell/.local/bin/virtualenvwrapper.sh
