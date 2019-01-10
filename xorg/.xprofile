@@ -5,8 +5,7 @@ xset r rate 200 60
 xrdb -merge ~/.Xresources
 
 # turn off Thinkpad touchpad
-# synclient TouchpadOff=1
-# synclient PalmDetect=1
+synclient TouchpadOff=1
 
 # startup applications
 compton --refresh-rate 60 &
