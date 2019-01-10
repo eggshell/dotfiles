@@ -36,3 +36,6 @@ scrollback
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# ignore irc logs
+config/.config/hexchat/logs/
