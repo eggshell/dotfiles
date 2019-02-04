@@ -145,13 +145,12 @@ programs:								      \
   GL: 				gltext -root				    \n\
   GL: 				menger -root				    \n\
   GL: 				molecule -root				    \n\
-				#rotzoomer -root				    \n\
+				rotzoomer -root				    \n\
 				speedmine -root				    \n\
   GL: 				starwars -root				    \n\
   GL: 				stonerview -root			    \n\
 				vermiculate -root			    \n\
 				whirlwindwarp -root			    \n\
-				#zoom -root				    \n\
 				anemone -root				    \n\
 				apollonian -root			    \n\
   GL: 				boxed -root				    \n\
