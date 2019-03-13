@@ -15,7 +15,7 @@
 " => Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if $COLORTERM == 'gnome-terminal'
+if $COLORTERM == 'truecolor'
     set t_Co=256
 endif
 
