@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer:
 "       Cullen Taylor
-"       https://github.com/eggshell
+"       https://gitlab.com/eggshell
 "
 " Sections:
 "    -> Colors
