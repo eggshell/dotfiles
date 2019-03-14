@@ -70,6 +70,7 @@ alias hdmi="xrandr --output HDMI1 --auto"
 alias office="xrandr --output DP3-1 --mode 2560x1440 --scale 1x1 --fb 4480x3640 --left-of eDP1 --dpi 108"
 alias notes="vim ~/dev/notes/notes.txt"
 alias screenshot="import -window root screen.png"
+alias vpn="/opt/piavpn/bin/pia-client &>/dev/null &"
 
 # git-related
 alias gcb="git checkout -b"
