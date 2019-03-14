@@ -1,3 +1,6 @@
+# set dpi for hidpi screens
+xrandr --dpi 140
+
 # set keyboar7d repeat rate
 xset r rate 200 60
 
