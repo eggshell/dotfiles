@@ -56,6 +56,8 @@ export PATH=$PATH:/home/eggshell/go/bin
 alias c="clear"
 alias caff="xscreensaver-command -exit"
 alias decaff="xscreensaver &"
+alias dev="cd ~/dev"
+alias getssh="cat /home/eggshell/.ssh/id_rsa.pub | pbcopy"
 alias grep="grep --color=auto"
 alias ll="ls -al"
 alias lock="xscreensaver-command --lock"
@@ -67,8 +69,7 @@ alias cpucheck="ps aux | sort -rk 3,3 | head -n 5"
 alias hdmi="xrandr --output HDMI1 --auto"
 alias office="xrandr --output DP3-1 --mode 2560x1440 --scale 1x1 --fb 4480x3640 --left-of eDP1 --dpi 108"
 alias notes="vim ~/dev/notes/notes.txt"
-alias dev="cd ~/dev"
-alias getssh="cat /home/eggshell/.ssh/id_rsa.pub | pbcopy"
+alias screenshot="import -window root screen.png"
 
 # git-related
 alias gcb="git checkout -b"
