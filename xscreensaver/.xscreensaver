@@ -1,3 +1,6 @@
+# Note: /etc/X11/app-defaults/XScreenSaver will overwrite this. Get around it
+# by deletion or symlinking.
+#
 # XScreenSaver Preferences File
 # Written by xscreensaver-demo 5.36 for eggshell on Fri Jan 27 16:30:13 2017.
 # https://www.jwz.org/xscreensaver/
