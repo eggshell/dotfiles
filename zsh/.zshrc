@@ -72,6 +72,7 @@ alias notes="vim ~/dev/notes/notes.txt"
 alias screenshot="import -window root screen.png"
 alias vpn="exec --no-startup-id /opt/piavpn/bin/pia-client &>/dev/null &"
 alias memcheck="ps -eo pmem,pcpu,vsize,pid,cmd | sort -k 1 -nr | head -5"
+alias yt="youtube-viewer"
 
 # git-related
 alias gcb="git checkout -b"
