@@ -11,8 +11,6 @@ xrdb -merge ~/.Xresources
 synclient TouchpadOff=1
 
 # startup applications
-compton --refresh-rate 60 &
-#dockd --daemon &
 indicator-cpufreq &
 nm-applet &
 redshift-gtk &
