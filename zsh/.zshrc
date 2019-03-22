@@ -90,7 +90,6 @@ alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1])
 
 # kubernetes
 alias k="kubectl"
-alias ic="ibmcloud"
 
 
 ################################################################################
