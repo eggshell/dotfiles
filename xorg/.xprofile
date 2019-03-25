@@ -11,6 +11,7 @@ xrdb -merge ~/.Xresources
 synclient TouchpadOff=1
 
 # startup applications
+dropbox start &>/dev/null
 nm-applet    &
 redshift-gtk &
 vpn          &
