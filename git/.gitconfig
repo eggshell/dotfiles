@@ -1,7 +1,7 @@
 [user]
 	name = Cullen Taylor
-	email = ctaylor@gitlab.com
+	email = cullen@eggshell.me
 [core]
 	editor = vim
 [gitreview]
-	username = mctaylor
+	username = eggshell
