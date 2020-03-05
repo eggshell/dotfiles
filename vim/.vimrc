@@ -56,6 +56,7 @@ set number
 set showcmd
 set wildmenu
 set colorcolumn=80
+set visualbell
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
