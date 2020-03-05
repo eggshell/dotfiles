@@ -112,3 +112,9 @@ export PIP_RESPECT_VIRTUALENV=true
 
 # source virtualenvwrapper.sh
 source /home/eggshell/.local/bin/virtualenvwrapper.sh
+
+# Turn off all beeps
+unsetopt BEEP
+
+# Change directory colors for WSL terminals.
+eval $(dircolors -p | sed -e 's/DIR 01;34/DIR 01;36/' | dircolors /dev/stdin)
