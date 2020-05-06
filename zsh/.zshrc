@@ -9,7 +9,7 @@
 ZSH_THEME="sunrise"
 
 #used for zsh syntax highlighting
-source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/utils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 export VISUAL="vim"
@@ -120,7 +120,7 @@ alias k="kubectl"
 ################################################################################
 
 # Turn off all beeps
-unsetopt BEEP
+# unsetopt BEEP
 
 # Change directory colors for WSL terminals.
-eval $(dircolors -p | sed -e 's/DIR 01;34/DIR 01;36/' | dircolors /dev/stdin)
+# eval $(dircolors -p | sed -e 's/DIR 01;34/DIR 01;36/' | dircolors /dev/stdin)
