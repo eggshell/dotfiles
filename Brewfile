@@ -8,9 +8,17 @@ tap 'instrumenta/instrumenta'		# kubeval
 # Binaries
 brew 'awscli'
 brew 'coreutils'
+brew 'findutils'
 brew 'gettext'
 brew 'git'
+brew 'gawk'
 brew 'gnupg2'
+brew 'gnutls'
+brew 'gnu-indent'
+brew 'gnu-getopt'
+brew 'gnu-sed'
+brew 'gnu-tar'
+brew 'grep'
 brew 'helm'
 brew 'htop'
 brew 'k9s'
@@ -33,6 +41,9 @@ cask 'firefox'
 cask 'flux'
 cask 'iterm2'
 cask 'keybase'
+cask 'pocket-casts'
+cask 'spotify'
+cask 'spotmenu'
 cask 'steam'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
@@ -41,3 +52,4 @@ cask 'vlc'
 
 # Mac App Store
 mas 'Amphetamine', id: 937984704
+mas 'Wireguard', id: 1451685025
