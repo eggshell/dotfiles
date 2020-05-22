@@ -11,7 +11,7 @@ ZSH_THEME="sunrise"
 #used for zsh syntax highlighting
 source $HOME/utils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH="/usr/local/opt/grep/libexec/gnubin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
 export VISUAL="vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -20,7 +20,6 @@ export VISUAL="vim"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-
 
 ################################################################################
 #                                                                              #
@@ -59,7 +58,6 @@ alias decaff="xscreensaver &"
 alias dev="cd ~/dev"
 alias getssh="cat /home/eggshell/.ssh/id_rsa.pub | pbcopy"
 alias grep="grep --color=auto"
-alias ll="ls -al"
 alias lock="xscreensaver-command --lock"
 alias pbcopy="xclip -sel clip"
 alias rf="rm -rf"
@@ -68,9 +66,8 @@ alias ..="cd .."
 alias cpucheck="ps aux | sort -rk 3,3 | head -n 5"
 alias hdmi="xrandr --output HDMI1 --auto"
 alias office="xrandr --output DP3-1 --mode 2560x1440 --scale 1x1 --fb 4480x3640 --left-of eDP1 --dpi 108"
-alias notes="vim ~/dev/notes/notes.txt"
+alias notes="vim ~/notes.txt"
 alias screenshot="import -window root screen.png"
-#alias vpn="exec --no-startup-id /opt/piavpn/bin/pia-client &>/dev/null &"
 alias memcheck="ps -eo pmem,pcpu,vsize,pid,cmd | sort -k 1 -nr | head -5"
 alias yt="youtube-viewer"
 
@@ -90,7 +87,6 @@ alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1])
 
 # kubernetes
 alias k="kubectl"
-
 
 ################################################################################
 #                                                                              #
