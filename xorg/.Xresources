@@ -17,7 +17,7 @@ Xft.autohint: 0
 Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
-Xft.dpi: 96
+Xft.dpi: 120
 
 ! urxvt config
 URxvt*background:         Black
@@ -53,5 +53,3 @@ URxvt*color12: #6464FF // blue
 URxvt*color13: #FF00FF // magenta
 URxvt*color14: #00FFFF // cyan
 URxvt*color15: #FFFFFF // white
-
-Xft.dpi:120
