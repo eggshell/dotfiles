@@ -1,8 +1,8 @@
 # set dpi for hidpi screens
-xrandr --dpi 140
+# xrandr --dpi 140
 
 # set keyboar7d repeat rate
-xset r rate 200 60
+xset r rate 200 40
 
 # make sure ~/.Xresources is loaded
 xrdb -merge ~/.Xresources
@@ -11,8 +11,11 @@ xrdb -merge ~/.Xresources
 synclient TouchpadOff=1
 
 # startup applications
-dropbox start &>/dev/null
-nm-applet    &
-redshift-gtk &
-vpn          &
-xscreensaver &
+#dropbox start &>/dev/null
+#nm-applet    &
+#redshift-gtk &
+#vpn          &
+compton --config ~/.config/compton.conf -b
+blueman-applet > /dev/null 2>&1 &
+xscreensaver > /dev/null 2>&1 &
+guake > /dev/null 2>&1 &
