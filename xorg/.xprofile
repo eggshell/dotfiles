@@ -9,6 +9,7 @@ xrdb -merge ~/.Xresources
 
 # turn off Thinkpad touchpad
 synclient TouchpadOff=1
+synclient MaxTapTime=0
 
 # startup applications
 #dropbox start &>/dev/null
@@ -18,4 +19,3 @@ synclient TouchpadOff=1
 compton --config ~/.config/compton.conf -b
 blueman-applet > /dev/null 2>&1 &
 xscreensaver > /dev/null 2>&1 &
-guake > /dev/null 2>&1 &

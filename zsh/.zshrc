@@ -54,7 +54,7 @@ export PATH=$PATH:/home/eggshell/go/bin
 # system
 alias c="clear"
 alias caff="xscreensaver-command -exit"
-alias decaff="xscreensaver &"
+alias decaff="nohup xscreensaver > /dev/null 2>&1 &!"
 alias dev="cd ~/dev"
 alias getssh="cat /home/eggshell/.ssh/id_rsa.pub | pbcopy"
 alias grep="grep --color=auto"
