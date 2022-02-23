@@ -5,3 +5,5 @@
 	editor = vim
 [gitreview]
 	username = eggshell
+[init]
+    defaultBranch = main
