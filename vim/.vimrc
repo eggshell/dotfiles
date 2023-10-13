@@ -78,3 +78,21 @@ nnoremap <leader><space> :nohlsearch<CR>
 set timeout timeoutlen=1000 ttimeoutlen=100
 set <f13>=fd
 imap <F13> <esc>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" refer to: https://github.com/VundleVim/Vundle.vim
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'google/vim-jsonnet'
+Plugin 'hashivim/vim-terraform'
+
+call vundle#end()            " required
+filetype plugin indent on    " required

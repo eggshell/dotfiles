@@ -40,3 +40,5 @@ Temporary Items
 
 # ignore irc logs
 config/.config/hexchat/logs/
+
+vim/.vim
