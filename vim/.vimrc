@@ -45,6 +45,12 @@ autocmd Filetype sh setlocal ts=4 sw=4 expandtab
 highlight ExtraWhitespace ctermbg=red guibg=red
 call matchadd('ExtraWhitespace', '\s\+$')
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YAML
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+let g:indentLine_char = '⦙'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI Config

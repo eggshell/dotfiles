@@ -1,7 +1,7 @@
 [user]
 	name = Cullen Taylor
 	email = cullen@eggshell.me
-	signingkey = D3432548862A08F5
+	signingkey = EAA3B3F6153EA9C7
 [core]
 	editor = vim
 [gitreview]

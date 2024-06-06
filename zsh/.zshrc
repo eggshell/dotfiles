@@ -7,9 +7,11 @@
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="sunrise"
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
 
 #used for zsh syntax highlighting
-source $HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="/usr/local/opt/grep/libexec/gnubin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
 export VISUAL="vim"
@@ -22,6 +24,7 @@ export VISUAL="vim"
 plugins=(
     git
     zsh-autosuggestions
+    tmux
 )
 
 ################################################################################
@@ -102,35 +105,16 @@ alias k="kubectl"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # gcloud
-alias staging="/bin/bash -c /Users/cullentaylor/git/gcloud-contexts/staging"
-alias qa="/bin/bash -c /Users/cullentaylor/git/gcloud-contexts/qa"
-alias prod="/bin/bash -c /Users/cullentaylor/git/gcloud-contexts/prod"
-alias sb-staging="/bin/bash -c /Users/cullentaylor/git/gcloud-contexts/sb-staging"
-alias int="/bin/bash -c /Users/cullentaylor/git/gcloud-contexts/integration"
-
-################################################################################
-#                                                                              #
-#                                 Python                                       #
-#                                                                              #
-################################################################################
-
-# set where virutal environments will live
-export WORKON_HOME=$HOME/.virtualenvs
-
-## ensure all new environments are isolated from the site-packages directory
-#export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-
-export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
-
-## use the same directory for virtualenvs as virtualenvwrapper
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-
-## makes pip detect an active virtualenv and install to it
-export PIP_RESPECT_VIRTUALENV=true
-
-## source virtualenvwrapper.sh
-#source /home/eggshell/.local/bin/virtualenvwrapper.sh
-source /opt/homebrew/bin/virtualenvwrapper.sh
+alias staging="/bin/bash -c /Users/eggshell/git/gcloud-contexts/staging"
+alias aws-staging="/bin/bash -c /Users/eggshell/git/gcloud-contexts/aws-staging"
+alias aws-prod="/bin/bash -c /Users/eggshell/git/gcloud-contexts/aws-prod"
+alias aws-develop="/bin/bash -c /Users/eggshell/git/gcloud-contexts/aws-develop"
+alias aws-cert="/bin/bash -c /Users/eggshell/git/gcloud-contexts/aws-cert"
+alias qa="/bin/bash -c /Users/eggshell/git/gcloud-contexts/qa"
+alias prod="/bin/bash -c /Users/eggshell/git/gcloud-contexts/prod"
+alias sb-staging="/bin/bash -c /Users/eggshell/git/gcloud-contexts/sb-staging"
+alias int="/bin/bash -c /Users/eggshell/git/gcloud-contexts/integration"
+alias develop="/bin/bash -c /Users/eggshell/git/gcloud-contexts/develop"
 
 ################################################################################
 #                                                                              #
@@ -149,9 +133,8 @@ source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 ### ruby / asdf
-#eval "$(rbenv init -)"
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
+source "$(brew --prefix asdf)/libexec/asdf.sh"
+source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
 
 ### docker
 #export DOCKER_DEFAULT_PLATFORM=linux/amd64
@@ -168,3 +151,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # gpg
 export GPG_TTY=$(tty)
+. "/Users/eggshell/.acme.sh/acme.sh.env"
