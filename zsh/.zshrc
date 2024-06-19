@@ -58,7 +58,7 @@ alias decaff="nohup xscreensaver > /dev/null 2>&1 &!"
 alias dev="cd ~/dev"
 alias getssh="cat /home/eggshell/.ssh/id_rsa.pub | pbcopy"
 alias grep="grep --color=auto"
-alias lock="xscreensaver-command --lock"
+alias lock="swaylock -f -i /usr/share/backgrounds/sway/twinpeaks.jpeg"
 alias pbcopy="xclip -sel clip"
 alias rf="rm -rf"
 alias svim="sudo vim"
@@ -88,6 +88,8 @@ alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1])
 # kubernetes
 alias k="kubectl"
 
+alias getip="curl -s -4 https://cloudflare.com/cdn-cgi/trace | grep -E '^ip' | cut -d'=' -f2"
+
 ################################################################################
 #                                                                              #
 #                                 Python                                       #
@@ -109,6 +111,10 @@ alias k="kubectl"
 ## source virtualenvwrapper.sh
 #source /home/eggshell/.local/bin/virtualenvwrapper.sh
 
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/git
+#source $HOME/.local/bin/virtualenvwrapper.sh
+
 ################################################################################
 #                                                                              #
 #                                 Windows                                      #
@@ -120,3 +126,5 @@ alias k="kubectl"
 
 # Change directory colors for WSL terminals.
 # eval $(dircolors -p | sed -e 's/DIR 01;34/DIR 01;36/' | dircolors /dev/stdin)
+
+export GPG_TTY=$(tty)

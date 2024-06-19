@@ -1,9 +1,12 @@
 [user]
 	name = Cullen Taylor
 	email = cullen@eggshell.me
+    #signingkey = 0AB973922D5EA922
 [core]
 	editor = vim
 [gitreview]
 	username = eggshell
 [init]
     defaultBranch = main
+#[commit]
+#	gpgsign = true
