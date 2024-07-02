@@ -12,6 +12,11 @@ icons = "awesome4"
 #bat_charging = "|^| "
 
 [[block]]
+block = "external_ip"
+interval = 300
+format = " $ip $country_code $region_code"
+
+[[block]]
 block = "net"
 interval = 5
 format = " $icon $ssid $signal_strength"
@@ -57,4 +62,9 @@ cmd = "pavucontrol"
 [[block]]
 block = "time"
 interval = 10
-format = " $timestamp.datetime(f:'%a %m/%d %T') "
+format = " $timestamp.datetime(f:'%a %m/%d %T')"
+
+[[block]]
+block = "external_ip"
+interval = 300
+format = "$timezone "
