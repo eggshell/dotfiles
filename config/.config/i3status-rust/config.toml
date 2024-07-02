@@ -1,0 +1,60 @@
+[theme]
+theme = "solarized-dark"
+
+[theme.overrides]
+idle_bg = "#123456"
+idle_fg = "#abcdef"
+
+[icons]
+icons = "awesome4"
+[icons.overrides]
+#bat = ["|E|", "|_|", "|=|", "|F|"]
+#bat_charging = "|^| "
+
+[[block]]
+block = "net"
+interval = 5
+format = " $icon $ssid $signal_strength"
+
+[[block]]
+block = "net"
+interval = 5
+format = "$ip "
+
+[[block]]
+block = "battery"
+driver = "upower"
+format = " $icon $percentage $time "
+
+[[block]]
+block = "cpu"
+format = " $icon $utilization "
+format_alt = " $icon $barchart "
+info_cpu = 20
+warning_cpu = 50
+critical_cpu = 90
+
+[[block]]
+block = "memory"
+format = " $icon $mem_total_used_percents.eng(w:2) "
+format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
+
+[[block]]
+block = "sound"
+driver = "pulseaudio"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "sound"
+driver = "pulseaudio"
+device_kind = "source"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "time"
+interval = 10
+format = " $timestamp.datetime(f:'%a %m/%d %T') "
