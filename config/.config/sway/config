@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 # Install these packages first (arch)
-# pacman -S sway i3status wmenu dmenu swayidle swaylock alacritty
+# pacman -S sway swaybg i3status-rust wmenu dmenu swayidle swaylock alacritty ttf-font-awesome powerline-fonts
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -34,6 +34,7 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/dotfiles/backgrounds/twinpeaks.jpeg fill
+
 #
 # Example configuration:
 #
@@ -41,22 +42,30 @@ output * bg ~/dotfiles/backgrounds/twinpeaks.jpeg fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+# monitor
 output 'GIGA-BYTE TECHNOLOGY CO., LTD. AORUS AD27QD 19240B002453' {
     mode 2560x1440@143.972Hz
     scale 1
 }
 
-output eDP-1 resolution 2160x1350@60Hz
-output eDP-1 scale 1.2
+# hutton built in
+output 'BOE 0x0BCA Unknown' {
+    resolution 2256x1504@60Hz
+    scale 1.2
+}
+
+# eggpad built in
+#output eDP-1 resolution 2160x1350@60Hz
+#output eDP-1 scale 1.2
 
 ### Idle configuration
 #
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -i /usr/share/backgrounds/sway/twinpeaks.jpeg' \
+         timeout 300 'swaylock -f -i ~/dotfiles/backgrounds/twinpeaks.jpeg' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -i /usr/share/backgrounds/sway/twinpeaks.jpeg'
+         before-sleep 'swaylock -f -i ~/dotfiles/backgrounds/twinpeaks.jpeg'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -82,6 +91,12 @@ input "type:keyboard" {
     xkb_options ctrl:swapcaps
     repeat_delay 200
     repeat_rate 40
+}
+
+input "type:touchpad" {
+    tap enabled
+    natural_scroll disabled
+    dwt enabled
 }
 
 ### Key bindings
@@ -201,7 +216,10 @@ input "type:keyboard" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     #bindsym $mod+minus scratchpad show
-    bindsym XF86Favorites scratchpad show
+    #bindsym XF86Favorites scratchpad show
+    bindsym XF86AudioMedia scratchpad show
+
+bindsym $mod+Ctrl+q exec 'swaylock -f -i ~/dotfiles/backgrounds/twinpeaks.jpeg'
 
 #
 # Resizing containers:
@@ -211,16 +229,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
+    bindsym $left resize grow width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $right resize shrink width 10px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
+    bindsym Left resize grow width 10px
     bindsym Down resize grow height 10px
     bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Right resize shrink width 10px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -237,10 +255,6 @@ bar {
     position top
     font pango:monospace 9
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-    #status_command i3status
     status_command i3status-rs /home/eggshell/.config/i3status-rust/config.toml
 
     colors {
@@ -253,11 +267,6 @@ bar {
 bindsym --locked XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec --no-startup-id brightnessctl set 5%+
 
-#bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
-#bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
-#bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
-#bindsym --locked XF86AudioMicMute exec --no-startup-id pactl set-source-mute 56 toggle
-
 bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -265,5 +274,7 @@ bindsym --locked XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DE
 
 exec_always iwgtk -i
 exec_always blueman-applet
+exec_always mako --default-timeout 5000
+exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 include /etc/sway/config.d/*
